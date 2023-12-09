@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  # nextjs:
+  #   build: ./frontend
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - db
+
+  flask:
+    build: ./backend
+    ports:
+      - "8001:8001"
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: todo-db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      TZ: Asia/Tokyo
+    ports:
+      - "5433:5432"
