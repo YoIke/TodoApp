@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/compornent/header";
 import {
   Box,
@@ -10,8 +12,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-function LoginForm() {
-  return <>aaaa</>;
+function Home() {
+  return <>TOP画面です</>;
 }
 
-export default LoginForm;
+export default Home;

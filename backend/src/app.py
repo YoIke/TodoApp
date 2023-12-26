@@ -21,11 +21,11 @@ def create_app():
 
     app.register_blueprint(auth_bp)
     app.register_blueprint(todo_bp)
-    CORS(app)
+
+    CORS(app, supports_credentials=True)
 
     return app
 
 if __name__ == '__main__':
     app = create_app()
     app.run(debug=True)
-
